@@ -4,10 +4,16 @@
     box-sizing: border-box;
 }
 
+.background-banner {
+    /* adicionei para da certo a margem padrao */
+    background-color: #F5F5F5; /* cor certa */
+}
+
 .banner {
-    /* border: 1px solid #C92071; */
+    /* ajuda a visualizar o limite das margens laterais para seguir o padrao*/
+    /* border: 1px solid green; */
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
 
     width: 100%;
