@@ -1,16 +1,15 @@
 // import Banner from "./components/Banner"  -- assim nao deu certo;
-// import Banner from '../../components/Banner';
-import ColecaoDestaque from '../../components/ColecaoDestaque';
+import Banner from '../../components/Banner';
 
-export default function Home() 
-{
-    return(
-        <>
-      
-        {/* <Banner/> */}
+import React from 'react';
+import ColecoesDestaqueIcones from '../../components/ColecoesDestaqueIcones';
 
-        <ColecaoDestaque />
 
-        </>
-    )
+export default function Home() {
+  return (
+    <>
+      {/* <Banner/> */}
+      <ColecoesDestaqueIcones />
+    </>
+  );
 }
