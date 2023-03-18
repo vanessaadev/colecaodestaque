@@ -1,5 +1,8 @@
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom"  -- NAO ESTAVA FUNCIONANDO ASSIM;
+import { Link } from '@mui/material';
 import React from "react";
+
+import { grey } from '@mui/material/colors';
 
 import { Avatar, Container, Grid } from "@mui/material";
 import "./styles.css";
@@ -15,54 +18,50 @@ import bonesrosa from "./boneROSA.svg";
 import tenisirosa from "./tenissROSA.svg";
 import fonesrosa from "./foneROSA.svg";
 
+export default function ColecoesDestaqueIcones() {
+  const [ativo, setAtivo] = React.useState(0);
 
-
-export default function ColecoesDestaqueIcones(){
-
-    const [ativo,setAtivo] = React.useState(0)
-
-    const colecoes = [
-  { nome: "Camisetas", imagem: camisetas, imagemAtiva: camisetasrosa},
-  { nome: "Calças", imagem: calcas, imagemAtiva: calcasrosa },
-  { nome: "Bonés", imagem: bones, imagemAtiva: bonesrosa },
-  { nome: "Headphones", imagem: fones, imagemAtiva: fonesrosa},
-  { nome: "Tênis", imagem: tenisi, imagemAtiva: tenisirosa },
+  const colecoes = [
+    { nome: "Camisetas", imagem: camisetas, imagemAtiva: camisetasrosa },
+    { nome: "Calças", imagem: calcas, imagemAtiva: calcasrosa },
+    { nome: "Bonés", imagem: bones, imagemAtiva: bonesrosa },
+    { nome: "Headphones", imagem: fones, imagemAtiva: fonesrosa },
+    { nome: "Tênis", imagem: tenisi, imagemAtiva: tenisirosa },
   ];
 
-// const isActive = ( ) => {
-//     if (cada.nome === isActive) {
-//         return "active";
-//     }
+  // const isActive = ( ) => {
+  //     if (cada.nome === isActive) {
+  //         return "active";
+  //     }
 
-//     return "";
-// };
+  //     return "";
+  // };
 
-
-const Sections = () => {
+  const Sections = () => {
     return colecoes.map((cada, posicao) => {
-        return (
+      return (
+        <Grid key={posicao} item className="iconeslinks" onClick={() => setAtivo(posicao)}>
+          <Avatar sx={{ backgroundColor: grey[50], height: "104px", width: "104px" }}>
+            <img src={posicao === ativo ? cada.imagemAtiva : cada.imagem} alt="qualquercoisa" />
+          </Avatar>
+          <Link to="/">{cada.nome}</Link>
+        </Grid>
+      );
+    });
+  };
 
-            <Grid item className="iconeslinks" onClick={() => setAtivo(posicao)}>
-                <Avatar sx={{ bgcolor: "white", height: "104px", width: "104px" }}>
-                        {/* <img src={(posicao === ativo) ? cada.imagemAtiva : cada.imagem}></img> ---- sem o alt tava dando erro */}
-                        <img src={(posicao === ativo) ? cada.imagemAtiva : cada.imagem} alt="qualquercoisa"></img>
-                </Avatar>
-                <Link to="">{cada.nome}</Link>
-            </Grid>
-        );
-    }); 
-}
+  return (
+    <>
 
-    return (
-        <>
-          <div className="bgGray">
-             <Container>
-                    <h3 className="h3dest">Coleções em destaque</h3>
-                    <Grid container  direction="row" justifyContent="center" alignItems="center"  spacing={2}> 
-                        <Sections/>
-                    </Grid>
-             </Container>
-          </div>
-        </>
-    )
+      {/* <div className="bgGray"> */}
+        {/* <Container> */}
+        <Container sx={{ backgroundColor: grey[200] }}>
+          <h3 className="h3dest">Coleções em destaque</h3>
+          <Grid container direction="row" justifyContent="center" alignItems="center" spacing={2}>
+            <Sections />
+          </Grid>
+        </Container>
+      {/* </div> */}
+    </>
+  );
 }
