@@ -16,9 +16,21 @@
 //     }
 // }
 
+.segura {
+    display: flex;
+    justify-content: space-between;
+    width: 1250px;
+    border: 1px solid red;
+    // gap: 6px;
+}
+
+.bg-paper {
+    background-color: purple;
+}
+
 .title-collection {
     font-size: 1.75rem;
-    font-weight: 700;
+    font-weight: 900;
     margin-top: 20px;
 }
 
