@@ -1,9 +1,9 @@
 import React from "react";
 import "./style.scss";
 import { Container, Button, Chip } from '@mui/material';
-import Blusa01 from '../../Imagens/blusa01.svg';
-import Tenis01 from '../../Imagens/tenis01.svg';
-import Fone01 from '../../Imagens/fone01.svg';
+import Blusa01 from './Imagens/blusa01.svg';
+import Tenis01 from './Imagens/tenis01.svg';
+import Fone01 from './Imagens/fone01.svg';
 
 
 export default function ColecaoDestaque() {
