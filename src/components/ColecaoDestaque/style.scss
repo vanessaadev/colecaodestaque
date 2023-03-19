@@ -1,37 +1,37 @@
-// @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Itim&display=swap');
+$color-gray: #F5F5F5;
+$color-pink: #C92071;
 
-// * {
-//     font-family: 'Inter', sans-serif;
-// }
 
-// #paperstyle {
-//     /* background-color: aquamarine; */
-//     width: 25.3rem;
-//     height: 15.6rem;
-//     display: flex;
-//     justify-content: space-between;
-
-//     .imagem {
-//         width: 100%;
-//     }
-// }
 
 .segura {
     display: flex;
-    justify-content: space-between;
-    width: 1250px;
-    border: 1px solid red;
-    // gap: 6px;
+    justify-content: space-around;
+    gap: 10px;
+    margin-top: 50px;
+
+.fundo {
+    display: flex;
+    background-color: #D8E3F2;
+    border-radius: 5px;
+    box-shadow: 2px 2px #F5F5F5;
 }
 
-.bg-paper {
-    background-color: purple;
+.alinharItens{
+    padding-left: 10px;
 }
 
-.title-collection {
-    font-size: 1.75rem;
-    font-weight: 900;
-    margin-top: 20px;
+.buttonRosa {
+    background-color: white;
+    color: #C92071; 
+    font-weight: bold;
+    text-transform: capitalize;
+    width: 140px;
+    height: 42px; 
 }
 
+.buttonRosa:hover {
+    background-color: $color-gray;
+    color: #C92071;
+}
 
+}
